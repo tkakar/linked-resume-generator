@@ -1,0 +1,178 @@
+
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --color-dark-purple: #3d348b;
+  --color-light-purple: #94849B;
+  --color-dark-gray: #A0AAB2;
+  --color-light-grey: #C7CEDB;
+  --color-light-green: #7E9181;
+  --color-alert-red:#cd0d0d
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+
+/* ****  *******  *********
+******   Header Section  ******/
+
+.app-header {
+  background-color: #240471;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; 
+  color: white;
+}
+
+.app-header ul {
+  display: flex;
+  list-style-type: none; 
+}
+
+.app-header ul li {
+  margin: 0px 10px;
+}
+
+.app-header ul li a {
+  color: rgb(246, 243, 243);
+  text-decoration: none;
+
+}
+
+.app-header ul li a:hover {
+  color: var(--color-light-purple)
+}
+
+.app-header a.active {
+  font-weight: bolder;
+  color:white
+}
+
+
+/* ****  *******  *********
+******   Main Section  ******/
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.middle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+  top: 50%;
+}
+
+.middle-container p {
+  font-size: 16px;
+}
+
+/* ****  *******  *********
+******   Home page  ******/
+
+input {
+  width: 60vw;
+  height: 10vh;
+  border-radius: 15px;
+  font-size: 2rem;
+  color: var(--color-light-grey)
+}
+
+.invalid {
+  border-color: var(--color-alert-red);
+}
+.valid {
+  border-color: var(--color-light-purple)
+}
+
+.search-icon {
+  font-size: 3rem;
+  color: var(--color-light-purple);
+}
+
+.search-icon:hover {
+  font-size: 3rem;
+  color: var(--color-dark-purple);
+  cursor: pointer;
+}
+
+.invalid-message {
+  color:var(--color-alert-red)
+}
+
+/* **** ***** *********
+******  Modal  ******/
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.707);
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  top: 50%;
+  padding: 20px;
+  border-radius: 8px;
+
+}
+
+.content span {
+  color: white;
+  margin: 0px 20px
+}
+
+.loading-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  border: 5px solid rgba(247, 247, 248, 0.738);
+  border-left-color: var(--color-light-purple);
+  border-radius: 50%;
+  color: white;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
