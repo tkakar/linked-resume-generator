@@ -1,5 +1,5 @@
-## Codon Optimization Application
-This app generates a resume from a provided LinkedIn profile URL. 
+## LinkedIn Resume Generator Application
+This app generates a resume from a provided LinkedIn profile URL. The frontend is a React app, while backend is Flask (Python). 
 The api is a Flask application that by default starts at port `5555` and uses code from  [linked_scrapper](https://github.com/joeyism/linkedin_scraper) to scrape a given linkedIn URL.  
 
 
