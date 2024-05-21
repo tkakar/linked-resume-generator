@@ -22,8 +22,7 @@ const LinkedInInput = ({loadData}) => {
 
   function checkValidity(value){
     const regex = /^https:\/\/www\.linkedin\.com\/in\//;
-    if(value === '' ) return value
-    else if (!regex.test(value) || !value  )
+    if (!regex.test(value) || !value || value === ''   )
       return false
     else return true
   }

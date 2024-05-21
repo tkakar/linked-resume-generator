@@ -113,23 +113,23 @@ class Person(Scraper):
                 company_name = company_name_elements.text if company_name_elements else "" 
             except:
                 company_name = ''
-                continue
+                
             try:
                 position = item.find_element(By.CSS_SELECTOR, 'div.t-bold > span:first-child')
                 position = position.text if position else ""
             except: 
                 position = ''
-                continue
+                
             try:
                 dates = item.find_element(By.CSS_SELECTOR, 'span.pvs-entity__caption-wrapper').text 
             except:
                 dates = ''
-                continue
+                
             try: 
                 details = item.find_element(By.CSS_SELECTOR, 'div.t-14.t-normal.t-black > span:first-child').text
             except:
                 details = ''
-                continue
+                
 
             experience = {
                 "company_name": company_name, 
@@ -159,18 +159,18 @@ class Person(Scraper):
                 company_name = company_name_elements.text if company_name_elements else "" 
             except:
                 company_name = ''
-                continue
+                
             try:
                 position = item.find_element(By.CSS_SELECTOR, 'div.t-bold > span:first-child')
                 position = position.text if position else ""
             except: 
                 position = ''
-                continue
+                
             try:
                 dates = item.find_element(By.CSS_SELECTOR, 'span.pvs-entity__caption-wrapper').text 
             except:
                 dates = ''
-                continue
+                
             education = {
                 "university": company_name, 
                 "degree": position, 
